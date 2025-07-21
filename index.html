@@ -89,14 +89,17 @@
                     <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Home</a></li>
                     <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">About Us</a></li>
 <!-- Our Courses with Dropdown -->
-<li class="group relative">
-  <button id="coursesBtn" class="flex items-center border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200">
+<li class="relative group">
+  <button id="coursesBtn" class="flex items-center w-full md:w-auto border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200">
     Our Courses
-    <svg class="ml-1 mt-1 w-4 h-4 transform md:group-hover:rotate-180 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"/></svg>
+    <svg class="ml-1 mt-1 w-4 h-4 transform md:group-hover:rotate-180 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"/>
+    </svg>
   </button>
 
-  <!-- Dropdown -->
-  <ul id="coursesDropdown" class="hidden absolute left-0 w-60 mt-2 bg-white text-black rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+  <ul id="coursesDropdown" class="absolute left-0 w-60 bg-white text-black rounded-xl shadow-lg z-50 transition-all duration-300 
+      hidden md:group-hover:block md:opacity-100 md:visible md:pointer-events-auto
+      md:transition-opacity md:duration-300">
     <li class="border-b px-4 py-3 hover:bg-[#DAA520] hover:text-white rounded-t-xl transition-all duration-200"><a href="#">100 Hour Yoga TTC</a></li>
     <li class="border-b px-4 py-3 hover:bg-[#DAA520] hover:text-white transition-all duration-200"><a href="#">200 Hour Yoga TTC</a></li>
     <li class="px-4 py-3 hover:bg-[#DAA520] hover:text-white rounded-b-xl transition-all duration-200"><a href="#">Online Yoga</a></li>
