@@ -9,24 +9,55 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style>
-    .slider-wrapper {
-      display: flex;
-      transition: transform 0.8s ease-in-out;
-    }
-    .slider-image {
-      min-width: 100%;
-      height: 100%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
 
-    .hero-heading {
+  .slider-image {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .hero-heading {
     font-family: 'Dancing Script', cursive;
   }
-  .hero-subheading, .hero-cta {
+
+  .hero-subheading,
+  .hero-cta {
     font-family: 'Poppins', sans-serif;
   }
-  </style>
+
+  /* ✅ Correct image fix — put it OUTSIDE the media query */
+  img.rounded-full {
+    width: 96px;
+    height: 96px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slide {
+    animation: slide 25s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .animate-slide-lg {
+      animation-duration: 40s;
+    }
+  }
+</style>
+
 
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -40,15 +71,7 @@
 
         <!-- navBar Starts -->
 
-        <div class="navBar w-full bg-[#F2F0E8]">
-
-            <div class="part1 hidden md:flex w-full px-10 gap-10 py-3 bg-[#DAA520]">
-                <p class="number flex justify-center items-center gap-2 text-xs text-white"><img src="icons/call.png" alt="number" class="h-8 md:h-10 border-1 rounded-full p-2 bg-white"><i>+91 7302892xxx</i></p>
-                <p class="email flex justify-center items-center gap-2 text-xs text-white"><img src="icons/email.png" alt="email" class="h-8 md:h-10 border-1 rounded-full p-2 bg-white"><i>xyz123@gmail.com</i></p>
-
-        </div>
-
-        <div class="nav-bar part-2 flex h-16 md:h-20 justify-between items-center px-5 md:px-10 md:py-5 ">
+        <div class="nav-bar flex h-16 md:h-20 justify-between items-center px-5 md:px-10 md:py-5 ">
 
                 <div class="logo h-16 p-3 flex items-center gap-1">
                     <img src="images/logo.png" alt="logo" class="h-full">
@@ -317,6 +340,136 @@
 </section>
 
 <!-- Our Courses -->
+
+<!-- Teachers Section -->
+<section class="py-16 px-4 md:px-16 bg-white" id="our-teachers">
+  <!-- Heading -->
+  <div class="text-center mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Meet Our Yoga Experts</h2>
+    <p class="text-gray-600 mt-2 text-md md:text-xl">Guiding you through balance, breath, and inner peace with years of experience</p>
+
+    <!-- Decorative Border Image -->
+    <div class="mt-2 flex justify-center">
+      <img src="images/border-line.png" alt="decorative underline" class="object-contain h-6">
+    </div>
+  </div>
+
+  <!-- Teacher Slider -->
+  <div class="overflow-hidden relative">
+    <div class="flex gap-6 animate-slide md:animate-slide-lg w-max">
+      <!-- Card Template -->
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher1.jpg" alt="Sandeep Kumar" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Sandeep Kumar</h4>
+        <p class="text-sm text-gray-600">Founder, Pranayama Instructor</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher2.jpg" alt="Pratap Rawat" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Pratap Rawat</h4>
+        <p class="text-sm text-gray-600">Senior Yoga Teacher</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher3.png" alt="Anil Chaudhary" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Anil Chaudhary</h4>
+        <p class="text-sm text-gray-600">Hatha Yoga Teacher</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher4.jpeg" alt="Rajkumari" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Rajkumari</h4>
+        <p class="text-sm text-gray-600">Yoga & Wellness Expert</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher5.jpeg" alt="Benu Ji" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Benu Ji</h4>
+        <p class="text-sm text-gray-600">Yoga Philosophy</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher6.jpg" alt="Chandra Adhikari" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Chandra Adhikari</h4>
+        <p class="text-sm text-gray-600">Ayurveda & Cooking Expert</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher7.jpg" alt="Jay Gaur" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Jay Gaur</h4>
+        <p class="text-sm text-gray-600">Hatha Yoga Specialist</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher8.jpeg" alt="Swami Atmananda" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Swami Atmananda</h4>
+        <p class="text-sm text-gray-600">Philosophy and Mantra Mentor</p>
+      </div>
+
+      <!-- Card Template -->
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher1.jpg" alt="Sandeep Kumar" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Sandeep Kumar</h4>
+        <p class="text-sm text-gray-600">Founder, Pranayama Instructor</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher2.jpg" alt="Pratap Rawat" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Pratap Rawat</h4>
+        <p class="text-sm text-gray-600">Senior Yoga Teacher</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher3.png" alt="Anil Chaudhary" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Anil Chaudhary</h4>
+        <p class="text-sm text-gray-600">Hatha Yoga Teacher</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher4.jpeg" alt="Rajkumari" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Rajkumari</h4>
+        <p class="text-sm text-gray-600">Yoga & Wellness Expert</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher5.jpeg" alt="Benu Ji" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Benu Ji</h4>
+        <p class="text-sm text-gray-600">Yoga Philosophy</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher6.jpg" alt="Chandra Adhikari" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Chandra Adhikari</h4>
+        <p class="text-sm text-gray-600">Ayurveda & Cooking Expert</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher7.jpg" alt="Jay Gaur" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Jay Gaur</h4>
+        <p class="text-sm text-gray-600">Hatha Yoga Specialist</p>
+      </div>
+
+      <div class="min-w-[220px] min-h-[320px] bg-white border rounded-xl shadow-md p-4 flex flex-col items-center text-center">
+        <img src="teacher8.jpeg" alt="Swami Atmananda" class="w-50 h-50 rounded object-cover mb-3" />
+        <h4 class="font-semibold text-lg">Swami Atmananda</h4>
+        <p class="text-sm text-gray-600">Philosophy and Mantra Mentor</p>
+      </div>
+
+    </div>
+    
+  </div>
+
+  <!-- Read More Button -->
+  <div class="text-center mt-10">
+    <button class="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-full shadow-md transition">
+      Read More
+    </button>
+  </div>
+</section>
+
+<!-- Teacher -->
 
 
     <!--    Javascript Linked   -->
