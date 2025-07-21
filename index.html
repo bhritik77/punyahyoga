@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Website</title>
+
+    <!-- Linking Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+    .slider-image {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .hero-heading {
+    font-family: 'Dancing Script', cursive;
+  }
+  .hero-subheading, .hero-cta {
+    font-family: 'Poppins', sans-serif;
+  }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- Homepage Starts -->
+
+    <section class="homepage w-screen">
+
+        <!-- navBar Starts -->
+
+        <div class="navBar w-full bg-[#F2F0E8]">
+
+            <div class="part1 hidden md:flex w-full px-10 gap-10 py-3 bg-[#DAA520]">
+                <p class="number flex justify-center items-center gap-2 text-xs text-white"><img src="icons/call.png" alt="number" class="h-8 md:h-10 border-1 rounded-full p-2 bg-white"><i>+91 7302892xxx</i></p>
+                <p class="email flex justify-center items-center gap-2 text-xs text-white"><img src="icons/email.png" alt="email" class="h-8 md:h-10 border-1 rounded-full p-2 bg-white"><i>xyz123@gmail.com</i></p>
+
+        </div>
+
+        <div class="nav-bar part-2 flex h-16 md:h-20 justify-between items-center px-5 md:px-10 md:py-5 ">
+
+                <div class="logo h-16 p-3 flex items-center gap-1">
+                    <img src="images/logo.png" alt="logo" class="h-full">
+                    <p class="logoText font-bold text-xl text-[#DAA520]">Punyah Yoga</p>
+                </div>
+
+                <div class="h-full flex gap-3">
+
+                    <div class="h-full flex flex-col p-3">
+                        <button class="md:hidden h-full p-1 menu-btn">
+                        <img src="icons/menu.png" alt="menu-icon" class="logo h-full menu-icon">
+                        </button>
+
+                    <ul class="nav-links hidden md:flex h-full justify-center items-center md:gap-4 text-md">
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Home</a></li>
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">About Us</a></li>
+<!-- Our Courses with Dropdown -->
+<li class="group relative">
+  <button id="coursesBtn" class="flex items-center border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200">
+    Our Courses
+    <svg class="ml-1 mt-1 w-4 h-4 transform md:group-hover:rotate-180 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"/></svg>
+  </button>
+
+  <!-- Dropdown -->
+  <ul id="coursesDropdown" class="hidden absolute left-0 w-60 mt-2 bg-white text-black rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+    <li class="border-b px-4 py-3 hover:bg-[#DAA520] hover:text-white rounded-t-xl transition-all duration-200"><a href="#">100 Hour Yoga TTC</a></li>
+    <li class="border-b px-4 py-3 hover:bg-[#DAA520] hover:text-white transition-all duration-200"><a href="#">200 Hour Yoga TTC</a></li>
+    <li class="px-4 py-3 hover:bg-[#DAA520] hover:text-white rounded-b-xl transition-all duration-200"><a href="#">Online Yoga</a></li>
+  </ul>
+</li>
+
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Our Teachers</a></li>
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Gallery</a></li>
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Testimonals</a></li>
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">Contact Us</a></li>
+                    <li class="nav-link border-2 border-transparent hover:text-white hover:bg-[#DAA520] hover:border-white p-2 rounded-xl transition-all duration-200"><a href="">FAQs</a></li>
+                    </ul>
+
+                    </div>
+
+                    
+
+                </div>
+
+        </div>
+
+        </div>
+
+        <!-- navBar Ends -->
+
+        <!-- Hero Section Starts -->
+
+        <!-- Hero Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+  
+  <!-- Slider Images -->
+  <div id="slider" class="slider-wrapper h-full">
+    <img src="images/hero4.jpeg" class="slider-image" />
+    <img src="images/hero1.webp" class="slider-image" />
+    <img src="images/hero2.webp" class="slider-image" />
+    <img src="images/hero3.webp" class="slider-image" />
+    <img src="images/hero4.jpeg" class="slider-image" />
+    <img src="images/hero1.webp" class="slider-image" />
+  </div>
+
+  <!-- Hero Text Overlay -->
+  <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white bg-black/30 text-center px-4 z-10">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 hero-heading">Transform Your Body & Mind</h1>
+    <p class="text-base md:text-xl mb-6 hero-subheading">Join our Yoga classes and start your wellness journey today.</p>
+    <a href="#contact" class="bg-[#DAA520] text-white hover:bg-white border-2 border-white hover:text-[#DAA520] px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300 hero-cta">Join Now</a>
+  </div>
+
+  <!-- Manual Control (optional) -->
+  <button id="prevBtn" class="absolute left-3 bottom-50 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10">
+    <img src="images/previous.png" alt="left arrow" class="h-6 w-6 md:h-10 md:w-10">
+  </button>
+</section>
+
+
+
+  <!-- Hero Section Ends -->
+
+        
+
+    </section>
+
+    <!-- Homepage Ends -->
+
+    <!-- About Us Section -->
+<section class="w-full px-5 md:px-20 py-16 bg-[#F2F0E8] mt-15">
+  <div class="flex flex-col md:flex-row items-center gap-10">
+
+    <!-- Left Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4 text-[#DAA520]">Welcome to Punyah Yoga</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 text-gray-600">Internationally Certified Yoga Teacher Training School In India</h2>
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+        Punyah Yoga in Rishikesh offers authentic Yoga Teacher Training Courses (TTC) designed to awaken your inner strength and spiritual growth. From 100-hour, 200-hour, to 300-hour Yoga TTC, we deliver transformative experiences led by certified instructors in the serene Himalayan foothills. <br>Alliance-certified teacher training Course while experiencing the true ashram lifestyle. Connect with a mindful community, deepen your yoga practice, and find spiritual retreat in the serene Himalayas. Embrace tradition, connection, and holistic wellness at our transformative yoga school. Join us for a journey to enlightenment and mindful living. 
+      </p>
+      <a href="#"
+        class="inline-block px-6 py-3 bg-[#DAA520] text-white hover:bg-white hover:text-[#DAA520] font-semibold text-sm md:text-base rounded-lg border-2 transition-all duration-300">
+        Learn More
+      </a>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full md:w-1/2">
+      <img src="images/about-us.jpeg" alt="About Yoga"
+        class="w-full h-auto rounded-lg shadow-lg object-cover max-h-[400px] md:max-h-[500px]">
+    </div>
+
+  </div>
+</section>
+
+<!-- About Us Section -->
+
+<!-- Dropdown -->
+<section class="bg-[#F2F0E8] py-10 px-4 sm:px-6 lg:px-20 my-15">
+  <div class="space-y-6">
+
+    <!-- Dropdown 1 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden">
+      <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none toggle-btn text-white">
+        <span>ॐ Why Punyah?</span>
+      </button>
+      <div class="toggle-content bg-white px-4 pb-4 text-sm leading-relaxed text-gray-800 py-2">
+        <p class="mt-2">
+  Choosing the right yoga teacher training in India — especially in Rishikesh — can feel overwhelming.
+  That’s exactly why we created <span class="font-semibold italic text-[#DAA520]">Punyah Yoga</span>:
+  a space built on <span class="underline">authenticity</span>, <span class="underline">accessibility</span>, and
+  <span class="underline">international standards</span>.
+</p>
+<p class="mt-3">
+  Nestled in the spiritual heart of Rishikesh, the <em>yoga capital of the world</em>, we offer
+  globally accredited courses that prepare you to teach with confidence — anywhere.
+</p>
+<ul class="list-disc ml-5 mt-4 space-y-2">
+  <li><strong>Deep roots:</strong> Emphasis on ancient yoga philosophy, not just poses</li>
+  <li><strong>Approachable teaching:</strong> Instructors who adapt for every body type</li>
+  <li><strong>Supportive vibe:</strong> A warm, family-like learning environment</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Dropdown 2 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden">
+      <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none toggle-btn text-white">
+        <span>ॐ What You’ll Learn</span>
+      </button>
+      <div class="toggle-content px-4 pb-4 text-sm leading-relaxed text-gray-800 bg-white py-2">
+        <p class="mt-2">
+  This isn’t just a certificate — it’s a full transformation of <span class="italic">body, mind, and soul</span>.
+</p>
+<p class="mt-3">
+  Led by <strong>5 experienced teachers</strong>, your training journey includes:
+</p>
+<ul class="list-disc ml-5 mt-4 space-y-2">
+  <li>Ashtanga, Hatha Yoga, Alignment & Adjustments</li>
+  <li>Ayurveda, Pranayama, Meditation, Mantras</li>
+  <li>Yoga Philosophy, History & Sanskrit insights</li>
+</ul>
+<p class="mt-3">
+  You’ll master sequencing, posture modifications, online + offline class strategies,
+  and dive into the sacred depth of the <em>eight limbs of yoga</em>.
+</p>
+
+      </div>
+    </div>
+
+    <!-- Dropdown 3 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden">
+      <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none toggle-btn text-white">
+        <span>ॐ The 4 Pillars of Punyah</span>
+      </button>
+      <div class="toggle-content px-4 pb-4 text-sm leading-relaxed text-gray-800 bg-white py-2">
+        <ul class="list-decimal ml-5 mt-2 space-y-3">
+  <li>
+    <strong>Interactive & Immersive:</strong>
+    More than a course — it’s a family-like atmosphere with deep, spiritual immersion.
+  </li>
+  <li>
+    <strong>Teaching to Teach:</strong>
+    We guide you to confidently lead your own classes — or even open your yoga studio.
+  </li>
+  <li>
+    <strong>Beyond Asanas:</strong>
+    Dive into the psychology, philosophy, and true purpose of yoga — far beyond just poses.
+  </li>
+  <li>
+    <strong>Deeper Connection:</strong>
+    It’s your personal journey. Grow spiritually as you align body, breath, and soul.
+  </li>
+</ul>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Drop down-->
+
+<!-- Our Courses -->
+
+<section class="bg-gray-100 py-12 px-4 md:px-16 my-5" id="our-courses">
+  <!-- Main Heading -->
+  <div class="text-center mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Explore Our Signature Yoga Programs</h2>
+    <p class="text-gray-600 mt-2 text-md md:text-xl">Discover the path that aligns with your inner self and lifestyle</p>
+
+    <!-- Decorative Border Image -->
+    <div class="mt-2 flex justify-center">
+      <img src="images/border-line.png" alt="decorative underline" class="object-contain h-8">
+    </div>
+  </div>
+
+  <!-- Course Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="shadow-lg rounded-2xl overflow-hidden border border-gray-200 flex flex-col">
+      <img src="images/card1.webp" alt="100 Hour Yoga" class="w-full h-52 object-cover">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">100 Hour Yoga Teacher Training</h3>
+        <p class="text-sm text-gray-600 mb-3">Kickstart your yoga journey with our 12-day foundational course guided by expert instructors in Rishikesh.</p>
+        <p class="text-sm text-gray-700 font-medium mb-4">⏳ Duration: 12 Days | 💰 From $699</p>
+
+        <!-- Buttons -->
+        <div class="flex gap-3 mt-auto flex-wrap">
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">Explore Details</a>
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">Apply Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="shadow-lg rounded-2xl overflow-hidden border border-gray-200 flex flex-col">
+      <img src="images/card2.webp" alt="200 Hour Yoga" class="w-full h-52 object-cover">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">200 Hour Yoga Teacher Training</h3>
+        <p class="text-sm text-gray-600 mb-3">Yoga Alliance Certified course designed for aspiring teachers seeking deep personal and spiritual growth.</p>
+        <p class="text-sm text-gray-700 font-medium mb-4">⏳ Duration: 23 Days | 💰 From $1299</p>
+
+        <div class="flex gap-3 mt-auto flex-wrap">
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">Explore Details</a>
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">Apply Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="shadow-lg rounded-2xl overflow-hidden border border-gray-200 flex flex-col">
+      <img src="images/card3.webp" alt="Online Yoga" class="w-full h-52 object-cover">
+      <div class="p-6 flex flex-col justify-between flex-1">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Daily Online Yoga Classes</h3>
+        <p class="text-sm text-gray-600 mb-3">Join live online sessions like Ashtanga, Hatha, Meditation & more from the comfort of your home.</p>
+        <p class="text-sm text-gray-700 font-medium mb-4">🧘 Beginner Friendly | 🌐 Online</p>
+
+        <div class="flex gap-3 mt-auto flex-wrap">
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">View Schedule</a>
+          <a href="#" class="bg-[#DAA520] text-white px-4 py-2 rounded-xl text-sm hover:bg-white hover:text-[#DAA520] border border-[#DAA520] transition">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Courses -->
+
+
+    <!--    Javascript Linked   -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
