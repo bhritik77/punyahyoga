@@ -8,6 +8,9 @@
     <!-- Linking Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -81,6 +84,365 @@
       <img src="images/border-line.png" alt="decorative underline" class="object-contain h-5 md:h-6">
     </div>
   </div>
+
+ <section class="py-20 px-4 md:px-16 bg-white text-gray-800">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Content -->
+    <div>
+      <h2 class="text-4xl font-bold text-[#DAA520] mb-6">200-Hour Yoga Teacher Training Course <span class="text-gray-800">- Yoga Alliance Certified</span></h2>
+      
+      <p class="text-lg leading-relaxed mb-6">
+        With highly experienced yoga teachers, instructors, and facilitators paired with our immersive and integrative approach, our 200-hour yoga teacher trainings have been designed with you and your yoga journey in mind. We will assist you on every step of your path to deepen your personal experience and knowledge of the entire path of yoga.
+      </p>
+
+      <p class="text-lg leading-relaxed">
+        The Punyah Yoga 200-hour Yoga Teacher Training Program guides students to become empowered practitioners who are firmly rooted in the sacred traditions of yoga. During the training, you will explore not just traditional yoga teachings and methodologies, but also spirituality as a process of self-inquiry and self-expansion. The insight, clarity, and knowledge you will gain from your 200-hour yoga teacher training in Rishikesh will shift your soul-energy and help you grow not just as a yoga practitioner, but as a person.
+      </p>
+    </div>
+
+    <!-- Image Slider -->
+    <div 
+      x-data="{
+        activeSlide: 0,
+        slides: ['images/courses1.webp', 'images/courses2.webp', 'images/courses3.webp', 'images/courses4.webp'],
+        next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length },
+        prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length }
+      }"
+      x-init="setInterval(() => next(), 3000)"
+      class="relative w-full h-80 overflow-hidden rounded-xl shadow-lg"
+    >
+      <!-- Slides -->
+      <template x-for="(slide, index) in slides" :key="index">
+        <div 
+          x-show="activeSlide === index" 
+          x-transition:enter="transition-opacity duration-700 ease-in-out"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition-opacity duration-700 ease-in-out"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="absolute inset-0"
+        >
+          <img :src="slide" alt="Slider Image" class="w-full h-full object-cover rounded-xl">
+        </div>
+      </template>
+
+      <!-- Buttons -->
+      <button 
+        @click="prev" 
+        class="absolute top-1/2 left-3 transform -translate-y-1/2 text-white p-2 text-6xl z-10"
+      >
+        ‹
+      </button>
+      <button 
+        @click="next" 
+        class="absolute top-1/2 right-3 transform -translate-y-1/2 text-white p-2 text-6xl z-10"
+      >
+        ›
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Pricing card -->
+
+<section class="bg-gray-100 py-20 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Left: Image -->
+    <div class="w-full md:w-1/2">
+      <img src="images/pricing.webp" alt="Join Us" class="rounded-xl object-cover w-full h-full max-h-[550px] shadow-2xl" />
+    </div>
+
+    <!-- Right: Card -->
+    <div class="w-full md:w-1/2 bg-white rounded-2xl shadow-2xl p-8 md:p-10 space-y-6">
+      
+      <!-- Heading & Subheading -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#DAA520] mb-2">Join Us</h2>
+        <p class="text-gray-600 text-[15px] leading-relaxed">
+          Are you ready to become a member of the <span class="font-semibold text-yellow-700">Punyah Yoga</span> family and take your knowledge of yoga to the next level? We are here to guide you, teach you, and support you on every step of your path.
+        </p>
+      </div>
+
+      <!-- Course Highlights -->
+      <ul class="text-gray-700 text-sm space-y-2">
+        <li><span class="font-semibold">📍 Location:</span> Punyah Yoga Residency, Rishikesh</li>
+        <li><span class="font-semibold">✅ Certification:</span> Yoga Alliance Certified</li>
+        <li><span class="font-semibold">📆 Duration:</span> 200-Hour Yoga TTC</li>
+        <li><span class="font-semibold">🍽️ Inclusions:</span> Tuition Fees, 3 Sattvic Meals/Day, Course Material, Stay</li>
+      </ul>
+
+      <!-- Pricing -->
+      <div class="border-y border-gray-300 py-6 flex flex-col md:flex-row gap-6 text-center">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-gray-800">USD $1299</h3>
+          <p class="text-gray-600 text-sm">Shared Room</p>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-bold text-gray-800">USD $1499</h3>
+          <p class="text-gray-600 text-sm">Private Room</p>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="pt-2">
+        <a href="contact-us.html" class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded-md transition-all">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Cards -->
+
+<section class="bg-white py-20 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto text-center">
+
+    <!-- Section Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-4">What Punyah Offers You</h2>
+    <p class="text-gray-600 text-base md:text-lg mb-12 max-w-3xl mx-auto">
+      At Punyah Yoga, we believe yoga is for everyone — and we mean it. Our mission is to provide inclusive, authentic, and life-transforming teachings that stay with you long after your journey ends.
+    </p>
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+        <img src="images/icon1.webp" alt="Inclusive & Empowering" class="w-full h-60 object-cover">
+        <div class="p-6 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Inclusive & Empowering</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            All students, regardless of age or experience, are welcome at Punyah Yoga. We truly believe that yoga is for every body and every soul.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+        <img src="images/icon2.webp" alt="Lasting Impact" class="w-full h-60 object-cover">
+        <div class="p-6 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Lasting Impact</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Your time at Punyah Yoga may be short, but the wisdom, memories, and growth you'll experience will stay with you for a lifetime.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+        <img src="images/icon3.webp" alt="Authentic Teachings" class="w-full h-60 object-cover">
+        <div class="p-6 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Authentic Teachings</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We share teachings rooted in lived experience — from personal discovery, deep practice, and mindful observation. That’s the Punyah way.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Yoga Shala -->
+
+<section class="bg-gray-50 py-20 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Left Content -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-4">Our Yoga Shala</h2>
+      <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+        Our state-of-the-art yoga shala is located on the top floor of the Punyah Residency, which was built in 2020 in Tapovan, Rishikesh. With a vast, expansive space, up to 50 students can be safely accommodated. With pristine hardwood floors and abundant windows, serenity is never far from your mat. From our windows, you can bask in stunning views of the Himalayas and the sacred Ganges river.
+      </p>
+      <br />
+      <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+        Our yoga shala is flanked by an open-air terrace, gardens, and balcony, where students can relax, socialize, or sip a cup of tea. While Rishikesh can be a buzzing and bustling city, Punyah Yoga is tucked away from it all on a quiet street, ensuring you stay more grounded in nature and in your practice.
+      </p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="md:w-1/2">
+      <img src="images/yoga-shala.webp" alt="Our Yoga Shala" class="rounded-xl shadow-lg w-full h-auto object-cover">
+    </div>
+    
+  </div>
+</section>
+
+<!-- Schedule -->
+
+<section class="bg-white py-20 px-6 md:px-16" id="daily-schedule">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-4">Daily Yoga Schedule</h2>
+    <div class="w-24 h-1 mx-auto bg-[#DAA520] mb-6"></div>
+    <p class="text-gray-700 text-lg mb-10 max-w-3xl mx-auto">
+      The <strong>200 hour Yoga Teacher Training Course</strong> at Punyah Yoga follows a strict schedule in alignment with Yoga Alliance standards. Nearly 6 to 7 hours of training time are assigned to various aspects of yoga daily. You may find the training intensive, but deeply enlightening.
+    </p>
+
+    <div class="mt-12 space-y-6 max-w-5xl mx-auto text-gray-800">
+  <!-- 1 -->
+  <div class="flex items-start bg-white rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule1.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">06:00 - 09:00 AM – Pranayama & Hatha Yoga Practice</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        Start the day with calming pranayama techniques followed by a grounding Hatha Yoga practice—ideal for beginners to build a steady foundation through mindful movements and breath awareness.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="flex items-start bg-gray-50 rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule2.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">09:00 - 10:00 AM – Sattvic Breakfast</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        Enjoy a wholesome, nourishing sattvic meal to support your yogic journey with clean and energizing food.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="flex items-start bg-white rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule3.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">10:00 AM - 01:00 PM – Theory & Practice Sessions</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        In-depth learning of yoga concepts, anatomy, alignment, and hands-on practice to deepen your understanding.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="flex items-start bg-gray-50 rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule4.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">01:00 - 03:00 PM – Lunch & Rest</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        A balanced meal followed by rest to restore energy and prepare for the afternoon sessions.
+      </p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="flex items-start bg-white rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule5.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">03:00 - 04:30 PM – Yoga Philosophy & Break</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        Explore the roots of yoga, its ancient texts, and how to integrate yogic wisdom into modern life. Includes a short break.
+      </p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="flex items-start bg-gray-50 rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule6.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">04:30 - 07:00 PM – Ashtanga Vinyasa & Meditation</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        A restorative asana practice followed by guided meditation to unwind and reflect on the day.
+      </p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="flex items-start bg-white rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule7.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">07:00 - 08:00 PM – Dinner</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        Light and nourishing dinner to promote healthy digestion and restful sleep.
+      </p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="flex items-start bg-gray-50 rounded-lg shadow px-6 py-5 gap-8">
+    <img src="images/schedule8.png" alt="Schedule Icon" class="w-12 h-12 object-contain mt-1" />
+    <div class="text-left">
+      <h4 class="text-gray-800 font-semibold text-lg">08:00 - 09:00 PM – Self Study</h4>
+      <p class="mt-1 text-gray-600 text-sm">
+        Time dedicated for journaling, reviewing notes, reading yogic texts, or quiet personal reflection.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+<!-- Curriculum -->
+
+<section class="bg-gray-100 py-20 px-6 md:px-16" id="curriculum">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Heading -->
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-3">200-Hour Yoga Teacher Training Curriculum</h2>
+      <div class="w-20 h-1 bg-[#DAA520] mb-4"></div>
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl">
+        Dive deep into the ancient roots of yoga with our carefully designed curriculum. Each module is created to enrich your understanding, expand your practice, and guide you on the yogic path.
+      </p>
+    </div>
+
+    <!-- Curriculum Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="flex items-start bg-white rounded-xl shadow-md p-6 gap-10">
+        <img src="images/curriculum1.png" alt="Asana Practice" class="w-24 h-24 object-contain mt-1" />
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-1">Asana Practice</h4>
+          <p class="text-sm text-gray-600">
+            Yoga asana classes, in Ashtanga, Hatha, and Vinyasa are held daily. We create a comfortable space to encourage growth and expansion for practitioners of all levels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex items-start bg-white rounded-xl shadow-md p-6 gap-10">
+        <img src="images/curriculum2.png" alt="Pranayama & Breathing" class="w-24 h-24 object-contain mt-1" />
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-1">Pranayama & Breathing</h4>
+          <p class="text-sm text-gray-600">
+            Align your body, mind, and spirit through the powerful practice of Pranayama. Learn ancient techniques that will help you tap into the source of your very being.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex items-start bg-white rounded-xl shadow-md p-6 gap-10">
+        <img src="images/curriculum3.png" alt="Vedanta & Philosophy" class="w-24 h-24 object-contain mt-1" />
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-1">Vedanta & Philosophy</h4>
+          <p class="text-sm text-gray-600">
+            The history of yoga and all the philosophies that surround yoga are integral to our teachings.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex items-start bg-white rounded-xl shadow-md p-6 gap-10">
+        <img src="images/schedule6.png" alt="Meditation & Yoga Nidra" class="w-24 h-24 object-contain mt-1" />
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-1">Meditation & Yoga Nidra</h4>
+          <p class="text-sm text-gray-600">
+            Meditation and yoga nidra classes will help you be guided to a state of deepened awareness, of conscious connection, of pure bliss.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 
