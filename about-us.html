@@ -15,6 +15,25 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll(".faq-toggle");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        const answer = this.nextElementSibling;
+        const icon = this.querySelector("svg");
+
+        // Toggle answer visibility
+        answer.classList.toggle("hidden");
+
+        // Rotate icon
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  });
+</script>
+
 
 </head>
 <body>
@@ -421,13 +440,11 @@
 </section>
 
 
-<!-- FAQ -->
-
+<!-- FAQ Section -->
 <section class="bg-[#F7F5EE] py-16 px-4 md:px-8">
-
   <div class="text-center mb-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Frequently Ask Questions </h2>
-    <p class="text-gray-600 mt-2 text-md md:text-xl">The Best Yoga School in Rishikesh </p>
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Frequently Ask Questions</h2>
+    <p class="text-gray-600 mt-2 text-md md:text-xl">The Best Yoga School in Rishikesh</p>
 
     <!-- Decorative Border Image -->
     <div class="mt-2 flex justify-center">
@@ -435,89 +452,81 @@
     </div>
   </div>
 
+  <div class="flex flex-col gap-4" id="faq-container">
 
-  
-  <div>
-    <div class="space-y-4" id="faq-container">
-
-      <!-- FAQ 1 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ What yoga styles are taught?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          We teach yoga classes in Hatha, Vinyasa, and Ashtanga styles.
-        </div>
-      </div>
-
-
-      <!-- FAQ 2 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ What equipment do I need?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          A yoga mat, water bottle, and comfortable clothing are recommended.
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ Are classes suitable for beginners?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          Absolutely! We welcome all levels, and our instructors guide you throughout.
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ How long are the sessions?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          Each session is typically 60 minutes, including warm-up and cool-down.
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ How do I join a class?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          You can register through our website’s contact form or visit our studio directly.
-        </div>
-      </div>
-
-      <!-- CTA Button -->
-      <div class="mt-10 text-center">
-        <a href="faqs.html" class="inline-block bg-[#DAA520] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#c7981a] transition-all duration-300 shadow-md">
-          View All FAQs
-        </a>
+    <!-- FAQ Item 1 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Is Punyah Yoga An Ashram?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Punyah Yoga is a registered yoga school from the Yoga Alliance to help students deepen their knowledge of yoga practice and learn how to teach the art. Thus, we offer an experience that can be likened to a yoga ashram.
       </div>
     </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Extend My Stay?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Absolutely! We welcome the opportunity to have you stay at the Punyah Residency and continue to practice with us. Of course, this does depend on room and class availability.
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Join The Program For Just A Few Days?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We would like you to join our course for a minimum of one week to get the full experience and understanding of yoga.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ How Long In Advance Should I Apply For A Teacher Training Course?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We conduct teachers training courses every month throughout the year. However, we highly recommend that you apply for a course 2 months in advance.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Switch My Course Dates After I’ve Already Booked?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        You are allowed to transfer from one course to another depending on the space and availability for that particular month. Once the training program has commenced, it is not possible to switch dates or defer it unless extenuating circumstances arise.
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-10 text-center">
+      <a href="faqs.html" class="inline-block bg-[#DAA520] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#c7981a] transition-all duration-300 shadow-md">
+        View All FAQs
+      </a>
+    </div>
   </div>
-
-</section>
-
-    <!-- FAQ -->
+</section>  
 
 
 

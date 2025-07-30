@@ -11,6 +11,25 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll(".faq-toggle");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        const answer = this.nextElementSibling;
+        const icon = this.querySelector("svg");
+
+        // Toggle answer visibility
+        answer.classList.toggle("hidden");
+
+        // Rotate icon
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  });
+</script>
+
 
 </head>
 <body>
@@ -82,6 +101,109 @@
     </div>
   </div>
 
+  <!-- Contact Section Part 1: Course Schedule and Registration -->
+<section class="bg-[#F7F5EE] py-16 px-4 md:px-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Left Image -->
+    <div>
+      <img src="images/contact-side.jpg" alt="Yoga Registration" class="rounded-lg shadow-lg w-full h-auto object-cover">
+    </div>
+
+    <!-- Right Content -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-4">Course Schedule and Registration</h2>
+      <p class="text-gray-700 text-lg mb-6">
+        If you would like to register for any of our yoga teacher training courses, whether held in-person in Rishikesh or online, please fill in the form below to get started.
+      </p>
+      <p class="text-gray-700 text-lg mb-2">
+        <strong>Questions?</strong> Feel free to reach out via email or phone. We are here to help in any way, shape, or form!
+      </p>
+      <div class="mt-4 text-lg text-[#444] space-y-2">
+        <p><strong>📞 Phone:</strong> <a href="tel:+918958343404" class="text-blue-600 hover:underline">+91 8958343404</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:punyahyogaindia@gmail.com" class="text-blue-600 hover:underline">punyahyogaindia@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section Part 2: Registration Form -->
+<section class="bg-[#F7F5EE] py-16 px-4 md:px-10">
+  <div class="max-w-4xl mx-auto text-center mb-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520] mb-2">Register Your Interest</h2>
+    <p class="text-gray-700 text-lg">
+      Fill in the form below and we'll get back to you with all the course details and next steps.
+    </p>
+  </div>
+
+  <!-- Form Card -->
+  <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 max-w-4xl mx-auto">
+    <form action="#" method="POST" class="space-y-6">
+
+      <!-- Name, Phone, Email -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" name="name" placeholder="Sophie Moore" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+        <input type="email" name="email" placeholder="Email Address" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+      </div>
+
+      <!-- Subject Dropdown -->
+      <div>
+        <label for="subject" class="block mb-2 text-left font-medium text-gray-700">Course Type</label>
+        <select name="subject" id="subject" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+          <option disabled selected>Select Course Type</option>
+          <option>100 Hour TTC</option>
+          <option>200 Hour TTC</option>
+          <option>Daily Drop In Classes</option>
+          <option>Daily Online Classes</option>
+        </select>
+      </div>
+
+      <!-- Accommodation Dropdown -->
+      <div>
+        <label for="accommodation" class="block mb-2 text-left font-medium text-gray-700">Accommodation</label>
+        <select name="accommodation" id="accommodation" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+          <option disabled selected>Select Accommodation Type</option>
+          <option>Single Room</option>
+          <option>Double Sharing</option>
+        </select>
+      </div>
+
+      <!-- Course Month Dropdown -->
+      <div>
+        <label for="month" class="block mb-2 text-left font-medium text-gray-700">Preferred Course Month</label>
+        <select name="month" id="month" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]">
+          <option disabled selected>Select Month</option>
+          <option>July 2025</option>
+          <option>August 2025</option>
+          <option>September 2025</option>
+          <option>October 2025</option>
+          <option>November 2025</option>
+          <option>December 2025</option>
+        </select>
+      </div>
+
+      <!-- Message Box -->
+      <div>
+        <label for="message" class="block mb-2 text-left font-medium text-gray-700">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Tell us about your goals, preferences, or anything you'd like to know..." class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#DAA520]"></textarea>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="text-center">
+        <button type="submit" class="bg-[#DAA520] hover:bg-[#c7981a] text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md">
+          Submit Registration
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+
+
+
 
 
 <!-- FINAL FOOTER -->
@@ -89,13 +211,11 @@
 <div class="FINAL-FOOTER">
 
 
-<!-- FAQ -->
-
+<!-- FAQ Section -->
 <section class="bg-[#F7F5EE] py-16 px-4 md:px-8">
-
   <div class="text-center mb-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Frequently Ask Questions </h2>
-    <p class="text-gray-600 mt-2 text-md md:text-xl">The Best Yoga School in Rishikesh </p>
+    <h2 class="text-3xl md:text-4xl font-bold text-[#DAA520]">Frequently Ask Questions</h2>
+    <p class="text-gray-600 mt-2 text-md md:text-xl">The Best Yoga School in Rishikesh</p>
 
     <!-- Decorative Border Image -->
     <div class="mt-2 flex justify-center">
@@ -103,89 +223,82 @@
     </div>
   </div>
 
+  <div class="flex flex-col gap-4" id="faq-container">
 
-  
-  <div>
-    <div class="space-y-4" id="faq-container">
-
-      <!-- FAQ 1 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ What yoga styles are taught?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          We teach yoga classes in Hatha, Vinyasa, and Ashtanga styles.
-        </div>
-      </div>
-
-
-      <!-- FAQ 2 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ What equipment do I need?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          A yoga mat, water bottle, and comfortable clothing are recommended.
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ Are classes suitable for beginners?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          Absolutely! We welcome all levels, and our instructors guide you throughout.
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ How long are the sessions?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          Each session is typically 60 minutes, including warm-up and cool-down.
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="bg-[#DAA520] rounded-md overflow-hidden overflow-hidden transition-all group">
-        <button class="w-full flex items-center justify-between p-4 text-left text-lg font-semibold focus:outline-none text-white faq-toggle">
-          <span>ॐ How do I join a class?</span>
-          <svg class="w-5 h-5 ml-2 transition-transform transform group-[.open]:rotate-180 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="px-4 py-3 text-sm text-gray-800 bg-white group-[.open]:block hidden">
-          You can register through our website’s contact form or visit our studio directly.
-        </div>
-      </div>
-
-      <!-- CTA Button -->
-      <div class="mt-10 text-center">
-        <a href="faqs.html" class="inline-block bg-[#DAA520] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#c7981a] transition-all duration-300 shadow-md">
-          View All FAQs
-        </a>
+    <!-- FAQ Item 1 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Is Punyah Yoga An Ashram?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Punyah Yoga is a registered yoga school from the Yoga Alliance to help students deepen their knowledge of yoga practice and learn how to teach the art. Thus, we offer an experience that can be likened to a yoga ashram.
       </div>
     </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Extend My Stay?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Absolutely! We welcome the opportunity to have you stay at the Punyah Residency and continue to practice with us. Of course, this does depend on room and class availability.
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Join The Program For Just A Few Days?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We would like you to join our course for a minimum of one week to get the full experience and understanding of yoga.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ How Long In Advance Should I Apply For A Teacher Training Course?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We conduct teachers training courses every month throughout the year. However, we highly recommend that you apply for a course 2 months in advance.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Switch My Course Dates After I’ve Already Booked?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        You are allowed to transfer from one course to another depending on the space and availability for that particular month. Once the training program has commenced, it is not possible to switch dates or defer it unless extenuating circumstances arise.
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-10 text-center">
+      <a href="faqs.html" class="inline-block bg-[#DAA520] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#c7981a] transition-all duration-300 shadow-md">
+        View All FAQs
+      </a>
+    </div>
   </div>
+</section>   
 
-</section>
-
-    <!-- FAQ -->
 
 
 

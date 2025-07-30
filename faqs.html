@@ -9,7 +9,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
+
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll(".faq-toggle");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        const answer = this.nextElementSibling;
+        const icon = this.querySelector("svg");
+
+        // Toggle answer visibility
+        answer.classList.toggle("hidden");
+
+        // Rotate icon
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  });
+</script>
 
 
 </head>
@@ -82,6 +102,497 @@
     </div>
   </div>
 
+   <!-- FAQ Section -->
+<section class="bg-[#F7F5EE] pb-16 px-4 md:px-8 flex flex-col gap-4">
+
+  
+
+    <!-- FAQ Item 1 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Is Punyah Yoga An Ashram?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Punyah Yoga is a registered yoga school from the Yoga Alliance to help students deepen their knowledge of yoga practice and learn how to teach the art. Thus, we offer an experience that can be likened to a yoga ashram.
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Extend My Stay?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        Absolutely! We welcome the opportunity to have you stay at the Punyah Residency and continue to practice with us. Of course, this does depend on room and class availability.
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Join The Program For Just A Few Days?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We would like you to join our course for a minimum of one week to get the full experience and understanding of yoga.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ How Long In Advance Should I Apply For A Teacher Training Course?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        We conduct teachers training courses every month throughout the year. However, we highly recommend that you apply for a course 2 months in advance.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ Can I Switch My Course Dates After I’ve Already Booked?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+        You are allowed to transfer from one course to another depending on the space and availability for that particular month. Once the training program has commenced, it is not possible to switch dates or defer it unless extenuating circumstances arise.
+      </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       What does the tuition fee include?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+For in-person Yoga Teacher Trainings, your fee includes: a single room/twin sharing accommodation at The Punyah Residency, two meals per day, one snack per day with chai, coconuts and few excursions. No food is provided on rest days, though we welcome you to dine at the Punyah Cafe. Your tuition fee does not include other expenses such as eating out, transportation, flight tickets, etc.
+      </div>
+    </div>
+
+    <!-- FAQ Item 7 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Will my certification be recognized in the USA? UK? Europe? Australia?
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+The Yoga Alliance Certification, while based in the USA, is recognized internationally all across the globe. Please note that though your certificate is Yoga Alliance recognized,  you must register with the Yoga Alliance separately. Registering as a member with Yoga Alliance USA does not register you as a member of Yoga Alliance UK/AU.       
+</div>
+    </div>
+
+    <!-- FAQ Item 8 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Is there access to WiFi and internet?
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+We proudly offer high-speed WiFi throughout the yoga shala, cafe, and all rooms at the Punyah Residency. We also have a generator to ensure that there is still power during outages.   
+  </div>
+
+  </div>
+
+
+<!-- FAQ Item 9 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+What if I am vegan, lactose-intolerant, or have food allergies?
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+If you have special dietary requirements, please let us know in advance, and we will be happy to arrange suitable options for you. We have happily accommodated lots of students in the past with allergies or dietary restrictions. We do this joyously and with ease! We are happy to keep your body happy! 
+  </div>
+
+  </div>
+
+  <!-- FAQ Item 10 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+What is your refund policy?
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Please note that we do not give refunds. It is your responsibility to ensure that you are fully insured against any unforeseen circumstances that may prevent you from attending the course. Please do not pay for a yoga teacher training course, retreat, YACEP program, or any other Punyah Yoga offering before receiving confirmation from one of the Punyah Yoga team members to proceed with submitting payment. In the case of extraordinary circumstances, refunds may be considered, however please note that there will be a 5% deduction from the refund as our credit card processing agent takes 5% when payment is made. Therefore, only a 95% refund is possible, and only in extraordinary circumstances. 
+  </div>
+
+  </div>
+   <!-- FAQ Item 11 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Do you offer scholarships? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+At this time, we are not currently offering scholarships. We appreciate your interest and will update the availability of scholarships if we offer them in the future.  
+ </div>
+</div>
+ <!-- FAQ Item 12 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Can I take a yoga teacher training course when I'm pregnant?
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+We strongly recommend that pregnant women consider taking our courses at a different time instead. Our yoga teacher training courses are not a suitable prenatal yoga practice unless you are a very experienced and seasoned practitioner. Please note: traditionally in Ashtanga yoga, women are not meant to practice during pregnancy and the first three months after giving birth. If you already have a well-established daily yoga practice, you can come take the course and modify accordingly. Please contact us before booking and we will discuss this together. 
+ </div>
+</div>
+ <!-- FAQ Item 13 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Do I need a tourist visa for India? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+
+
+Yes, a tourist visa is all you need. E-visas are easily acquired online. This is done through the government of India website and we do not recommend going through third parties to obtain visas.
+ </div>
+
+ </div>
+ <!-- FAQ Item 15 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Can I arrive early for my yoga teacher training course or yoga retreat? </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+
+
+If you wish to arrive a few nights early, you must let us know about your arrival in advance. You will be charged on a per day basis. This will not be included in the Yoga Teacher Training Course fee. Most of our students do arrive a day or two in advance, and we are happy to greet you early at the Punyah Residency. 
+ </div>
+</div>
+ <!-- FAQ Item 16 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Which airport should I fly into? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+
+
+
+
+We advise students to fly from New Delhi (DEL) to Dehradun (DED) airport. Rishikesh is just 20 kilometers away from Dehradun airport, which takes about 45 minutes and costs Rs 900 approximately by taxi. If you would like to book a taxi, either from the New Delhi Airport or from the Dehradun Airport, we can organize this for you for an additional fee. Please keep in mind that a taxi trip from New Delhi to Rishikesh can take anywhere from 5-10hrs dependent on traffic.
+ </div>
+</div>
+ <!-- FAQ Item 17 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Should I bring my own yoga mat? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+We advise that you bring your own mat for personal hygiene and cleanliness. That being said, we know that traveling with a yoga mat can be bulky! We do sell yoga mats at our boutique and we do have mats available to use in our shala. 
+ </div>
+
+</div>
+ <!-- FAQ Item 18 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Can I share a room with a friend or significant other? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+If you are taking a course along with your partner or friend and wish to stay together, please let us know in advance. We will do our best to accommodate you. 
+ </div>
+</div>
+ <!-- FAQ Item 19 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Where will I stay during my yoga teacher training?  </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Built in 2020, the Punyah Residency is a boutique hotel in Rishikesh that takes great care in meeting the highest standards of hospitality. Guests are presented with high-quality services, first-class facilities, and luxurious amenities, including a spectacular top-floor yoga shala, a vast rooftop garden terrace, and a delectable restaurant. The Punyah Residency is sheltered from the sensory-overload of the outside world in Tapovan, Rishikesh. Rooms are equipped with Wifi, air-conditioning, private western-styled bathrooms, towels, table and chair, a flat-screen TV, wardrobe, and private or shared balconies. 
+ </div>
+</div>
+ <!-- FAQ Item 20 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+What is the weather link in Rishikesh? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+January is definitely the coldest. When it comes to clothing, think layers, socks and sweaters! The sky is partially cloudy and mornings can be very foggy.
+
+<br><br>It gets pleasant in February and a lot of blue skies dominate, but days can still be a bit chilly. Sightseeing and adventurous activities like trekking can be enjoyed during this month. Long sleeves, trousers, and warmer clothes for nighttimes are highly recommended.
+
+<br><br>Moderately hot during day and nights with a slightly cool breeze, March in Rishikesh is the best time to enjoy rafting and other outdoor adventure pursuits. This is especially a good month for yogis as the international yoga festival takes place at this time. One can pack lighter clothing items during this time.
+
+<br><br>It’s getting hotter in April. Outdoor activities can be still enjoyed as the heat is still within most people’s comfort zone. Short sleeves and skirts can be used, but please remember to keep your shoulders and knees covered. Take a dip in the Ganga: the clear skies and plenty of sunshine make it ideal!
+
+<br><br>It gets a bit hot in May and is often considered to be the hottest month of the year. Maybe not the best time to visit, but we think that Rishikesh is always worth a visit throughout the year.
+
+<br><br>The hot weather during June in Rishikesh melts the ice in the northern region, feeding the streams of Rishikesh and raising the water levels.
+
+<br><br>Monsoon season starts in July where it gets cooler. There will be cloudy skies most days and increasing humidity, but still manageable. It’s the perfect month for nature enthusiasts, but do not forget to bring your rain gear.
+
+<br><br>The wettest month, August is fantastic for people who like rain. Stunning shades of green for our rain lovers during this season. The days are warm and the evenings are pleasant. Bring your rain gear!
+
+<br><br>September is a moderate month. The month is ideal for outdoor travels and enjoyed by most tourists because of clear skies and plenty of sunshine. Days can be hot, so bring your light clothing items.
+
+<br><br>Humid and cool, October is one of the best months to visit Rishikesh. You will love doing yoga during this time. Warm during the day and evenings begin to get cooler.
+
+<br><br>November is perfect for enjoying indoor and outdoor activities. Winter starts at the end of the month but there will still be plenty of sunshine. Plan to layer up clothing, especially in the mornings and evenings.
+
+<br><br>Nights are getting cool in December and winter is coming to town. But still, days are pretty comfortable. Again, think layers and keep yourself warm. Mornings and evenings can get cold!
+ </div>
+</div>
+ <!-- FAQ Item 21 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+What is the food like? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Here at the Punyah Café, we serve only the finest vegetarian and vegan meals, drinks, and snacks. Punyah  operates in accordance to the strict Western standards of hygiene for food preparation. We uphold the highest-level of hygienic and safety standards, you can trust Punyah Cafe to nourish your body, mind, and spirit. Whenever possible, we source our produce from our very own organic garden. 
+ </div>
+</div>
+ <!-- FAQ Item 22 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Who are your yoga teacher trainings for? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+All of our yoga teacher training programs are geared towards practitioners of all levels, all ages, and all abilities. The practice can be adapted to meet your specific needs. Whether your aim is to start on the path as a yoga teacher, or to learn the foundations of yoga and deepen your own practice, our yoga teacher training programs will be equally informative and transformative.  We would like to note that we have students attending from all over the world and are an inclusive institution who welcomes people— all people! 
+ </div>
+</div>
+ <!-- FAQ Item 23 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+Are your courses Yoga Alliance certified? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Yes! Punyah Yoga is a Registered Yoga School with Yoga Alliance at the 200-hour level. Upon successful completion of the course, you will receive a certificate from Punyah Yoga and will be able to register with Yoga Alliance as a RYT (Registered Yoga Teacher). 
+ </div>
+</div>
+ <!-- FAQ Item 24 -->
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+How many people take in-person yoga courses at once? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+This is a good question! Of course you want to know if you will be in a small group or in a group of 100 people! Each month, the amount of people attending our yoga courses vary. As COVID19 has changed our courses drastically, we are unsure how to best answer this question at this time. We will say that generally, prior to COVID, anywhere from 8-20 people have attended our courses during any given month.  
+</div>
+</div>
+<!-- FAQ Item 25 -->  
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+What type of yoga is taught at Punyah Yoga? 
+</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+The style of yoga we teach at Punyah Yoga is Ashtanga, Hatha, and Vinyasa that allows our students to embark upon an insightful journey within while being rooted in the most ancient and authentic teachings of yoga. Our yoga classes are deeply intentional as we honor yogic philosophy, traditions, and methods. With a deeper awareness and understanding of the body, one can come into alignment with mind, body, spirit and one's life purpose. 
+</div>
+</div>
+<!-- FAQ Item 25 --> 
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+ Are there any days off during the yoga teacher training program?</span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Yes, we typically have 1 day off a week during the 100hr and 200hr yoga teacher training programs. This differs for our online courses. 
+</div>
+</div>
+<!-- FAQ Item 26 --> 
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+
+How long do I need to practice yoga before attending a yoga teacher training course either online or in-person?
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+There are no requirements to join a yoga teacher training course, so long as you have an interest in yoga and meditation. We have welcomed students who are just getting started on the path, as well as long-time practitioners. All are welcome! If you wish to take yoga classes with us prior to joining our TTC, we offer online videos on YouTube where you can practice along with us to prepare for your yoga teacher training. 
+</div>
+</div>
+<!-- FAQ Item 27 --> 
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+
+Do you offer payment plans? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Yes, we are able to set up custom and long term payment plans upon request. Generally, we will split the payment in two or into three installments if requested. 
+</div>
+</div>
+<!-- FAQ Item 28 --> 
+
+    <div class="bg-[#DAA520] rounded-md overflow-hidden group">
+      
+      <button class="faq-toggle w-full flex items-center justify-between p-4 text-left text-lg font-semibold text-white">
+        <span>ॐ       
+
+Can I begin teaching right away after completing this course? 
+ </span>
+        <svg class="w-5 h-5 ml-2 transition-transform duration-300 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="faq-answer px-4 py-3 text-md text-gray-800 bg-white hidden">
+Yes, you will have all of the tools necessary to begin your yoga teaching journey immediately after completion of this course. You will also be able to register with Yoga Alliance directly after successful completion of the program. In fact, we have had students open their own yoga studio within months of completion of our course! 
+</div>
+</div>
+
+
+ 
+
+ 
+
+
+
+
+
+    
+  </div>
+</section>  
+
+
+  
 
 
 <!-- FINAL FOOTER -->

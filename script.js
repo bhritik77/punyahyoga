@@ -114,14 +114,14 @@ coursesBtn?.addEventListener("click", (e) => {
       slideInterval = setInterval(autoSlide, 4000);
     }
 
-   // FAQ
 
-   document.querySelectorAll('.faq-toggle').forEach(button => {
-  button.addEventListener('click', () => {
-    const parent = button.closest('.group');
-    parent.classList.toggle('open');
-  });
-});
+ 
+
+
+
+
+
+
 
 
 
